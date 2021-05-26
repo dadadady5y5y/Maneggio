@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cavallis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Descrizione</th>
+      <th>Età</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cavallis.each do |cavalli| %>
+      <tr>
+        <td><%= cavalli.nome %></td>
+        <td><%= cavalli.descrizione %></td>
+        <td><%= cavalli.età %></td>
+        <td><%= link_to 'Show', cavalli %></td>
+        <td><%= link_to 'Edit', edit_cavalli_path(cavalli) %></td>
+        <td><%= link_to 'Destroy', cavalli, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cavalli', new_cavalli_path %>

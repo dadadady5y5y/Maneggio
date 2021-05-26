@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @cavalli.nome %>
+</p>
+
+<p>
+  <strong>Descrizione:</strong>
+  <%= @cavalli.descrizione %>
+</p>
+
+<p>
+  <strong>Età:</strong>
+  <%= @cavalli.età %>
+</p>
+
+<%= link_to 'Edit', edit_cavalli_path(@cavalli) %> |
+<%= link_to 'Back', cavallis_path %>

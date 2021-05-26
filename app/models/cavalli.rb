@@ -1,0 +1,2 @@
+class Cavalli < ApplicationRecord
+end

@@ -1,0 +1,32 @@
+<%= form_with(model: cavalli) do |form| %>
+  <% if cavalli.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cavalli.errors.count, "error") %> prohibited this cavalli from being saved:</h2>
+
+      <ul>
+        <% cavalli.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descrizione %>
+    <%= form.text_area :descrizione %>
+  </div>
+
+  <div class="field">
+    <%= form.label :età %>
+    <%= form.number_field :età %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
